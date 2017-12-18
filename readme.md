@@ -1,20 +1,14 @@
-# Stencil App Starter
+# Ionic PWA Toolkit
 
-Stencil is a compiler for building fast web apps using Web Components.
-
-Stencil combines the best concepts of the most popular frontend frameworks into a compile-time rather than run-time tool.  Stencil takes TypeScript, JSX, a tiny virtual DOM layer, efficient one-way data binding, an asynchronous rendering pipeline (similar to React Fiber), and lazy-loading out of the box, and generates 100% standards-based Web Components that run in any browser supporting the Custom Elements v1 spec.
-
-Stencil components are just Web Components, so they work in any major framework or with no framework at all. In many cases, Stencil can be used as a drop in replacement for traditional frontend frameworks given the capabilities now available in the browser, though using it as such is certainly not required.
-
-Stencil also enables a number of key capabilities on top of Web Components, in particular Server Side Rendering (SSR) without the need to run a headless browser, pre-rendering, and objects-as-properties (instead of just strings).
+The Ionic PWA Toolkit is the recommended way to build production ready PWAs with Ionic. This toolkit gets you started with using [Stencil](https://stenciljs.com/), Ionic Core and Ionic PWA hosting. This combination of tools gives you the ability to build a fast, efficient PWA with 0 config needed and all the best practices built in out of the box.
 
 ## Getting Started
 
-To start a new project using Stencil, clone this repo to a new directory:
+To start building a PWA with the Ionic PWA Toolkit, clone this repo to a new directory:
 
 ```bash
-git clone https://github.com/ionic-team/stencil-starter.git my-app
-cd my-app
+git clone https://github.com/ionic-team/ionic-pwa-toolkit.git my-pwa
+cd my-pwa
 git remote rm origin
 ```
 
@@ -25,19 +19,17 @@ npm install
 npm start
 ```
 
-To view the build, start an HTTP server inside of the `/www` directory.
+## Production
 
-To watch for file changes during development, run:
-
-```bash
-npm run dev
-```
-
-To build the app for production, run:
+To build your PWA for production, run:
 
 ```bash
 npm run build
 ```
+A production build includes everything needed for your project to be a PWA right out of the box. This includes both a web manifest (src/manifest.json) and a service worker (www/sw.js).
+
+
+## Unit Tests
 
 To run the unit tests once, run:
 
@@ -50,3 +42,7 @@ To run the unit tests and watch for file changes during development, run:
 ```
 npm run test.watch
 ```
+
+## Testing your PWA's performance
+
+We recommend using https://www.webpagetest.org/easy with the `Run Lighthouse Audit` option turned on. This will give you an in depth look into your PWAs load performance on the average device connected to the average network. For more info on how to use webpagetest check out https://zoompf.com/blog/2015/07/the-seo-experts-guide-to-web-performance-using-webpagetest-2.
