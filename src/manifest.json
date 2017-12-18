@@ -1,6 +1,6 @@
 {
-  "name": "Stencil Starter",
-  "short_name": "Stencil",
+  "name": "Ionic PWA Toolkit",
+  "short_name": "Ionic PWA",
   "start_url": "/",
   "display": "standalone",
   "icons": [{
@@ -8,6 +8,6 @@
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "background_color": "#16161d",
-  "theme_color": "#16161d"
+  "background_color": "#488aff",
+  "theme_color": "#488aff"
 }

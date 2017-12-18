@@ -4,7 +4,8 @@ exports.config = {
     { components: ['app-profile'] }
   ],
   collections: [
-    { name: '@stencil/router' }
+    { name: '@stencil/router' },
+    { name: '@ionic/core' }
   ]
 };
 

@@ -9,20 +9,28 @@ export class AppHome {
 
   render() {
     return (
-      <div>
-        <p>
-          Welcome to the Stencil App Starter.
-          You can use this starter to build entire apps all with
-          web components using Stencil!
-          Check out our docs on <a href='https://stenciljs.com'>stenciljs.com</a> to get started.
-        </p>
+      <ion-page class='show-page'>
+        <ion-header md-height='56px'>
+          <ion-toolbar color='primary'>
+            <ion-title>Ionic PWA Toolkit</ion-title>
+          </ion-toolbar>
+        </ion-header>
 
-        <stencil-route-link url='/profile/stencil'>
-          <button>
-            Profile page
-          </button>
-        </stencil-route-link>
-      </div>
+        <ion-content>
+          <p>
+            Welcome to the Ionic PWA Toolkit.
+            You can use this starter to build entire apps all with
+            web components using Stencil and ionic/core!
+            Check out our docs on <a href='https://stenciljs.com'>stenciljs.com</a> to get started.
+          </p>
+
+          <stencil-route-link url='/profile/stencil'>
+            <ion-button>
+              Profile page
+            </ion-button>
+          </stencil-route-link>
+        </ion-content>
+      </ion-page>
     );
   }
 }
