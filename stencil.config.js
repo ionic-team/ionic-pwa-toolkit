@@ -6,7 +6,15 @@ exports.config = {
   collections: [
     { name: '@stencil/router' },
     { name: '@ionic/core' }
-  ]
+  ],
+  serviceWorker: {
+    globPatterns: [
+      '**/*.{js,css,json,html,ico,png,jpeg}'
+    ],
+    globIgnores: [
+      'build/app/svg/*.js'
+    ]
+  }
 };
 
 exports.devServer = {
