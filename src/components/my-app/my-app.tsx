@@ -11,21 +11,20 @@ export class MyApp {
 
   componentDidLoad() {
     // handle service worker updates
-    window.addEventListener('swupdate', () => {
+    window.addEventListener('swUpdate', () => {
       this.toastCtrl.create({
         message: 'New version available',
         showCloseButton: true,
-        closeButtonText: 'Reload',
-        translucent: true
+        closeButtonText: 'Reload'
       }).then((toast) => {
+        console.log(toast);
         toast.present();
       });
     })
   }
 
-  @Listen('body:ionToastDidDismiss')
+  @Listen('body:ionToastWillDismiss')
   reload() {
-    console.log('event fired');
     window.location.reload();
   }
 
