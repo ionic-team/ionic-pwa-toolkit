@@ -10,14 +10,21 @@ export class MyApp {
   @Prop({ connect: 'ion-toast-controller' }) toastCtrl: ToastController;
 
   componentDidLoad() {
-    // handle service worker updates
+    /*
+      Handle service worker updates correctly.
+      This code will show a toast letting the
+      user of the PWA know that there is a 
+      new version available. When they click the
+      reload button it then reloads the page 
+      so that the new service worker can take over
+      and serve the fresh content
+    */
     window.addEventListener('swUpdate', () => {
       this.toastCtrl.create({
         message: 'New version available',
         showCloseButton: true,
         closeButtonText: 'Reload'
       }).then((toast) => {
-        console.log(toast);
         toast.present();
       });
     })
