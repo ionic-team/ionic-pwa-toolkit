@@ -26,7 +26,18 @@ To build your PWA for production, run:
 ```bash
 npm run build
 ```
-A production build includes everything needed for your project to be a PWA right out of the box. This includes both a web manifest (src/manifest.json) and a service worker (www/sw.js).
+A production build includes everything needed for your project to be a PWA right out of the box. This includes both a Web Manifest (src/manifest.json) and a Service Worker (www/sw.js).
+
+
+## Service Workers
+
+For info on how Service Workers work in Stencil check out our [Service Worker docs](https://stenciljs.com/docs/service-workers).
+
+## Developing with a Service Worker
+
+In some cases, for instance when you are working on adding [web push notifications](https://developers.google.com/web/fundamentals/push-notifications/) or [background sync](https://developers.google.com/web/updates/2015/12/background-sync), both which require a Service Worker, it can be handy to be able to dev builds with a service worker.
+
+To do this with the Ionic PWA toolkit simply run `npm run devWithSW`. This will start a dev build, but with the Service Worker also getting livereloaded.
 
 
 ## Unit Tests
