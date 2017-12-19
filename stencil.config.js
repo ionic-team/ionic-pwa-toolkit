@@ -8,12 +8,7 @@ exports.config = {
     { name: '@ionic/core' }
   ],
   serviceWorker: {
-    globPatterns: [
-      '**/*.{js,css,json,html,ico,png,jpeg}'
-    ],
-    globIgnores: [
-      'build/app/svg/*.js'
-    ]
+    swSrc: 'src/sw.js'
   }
 };
 
