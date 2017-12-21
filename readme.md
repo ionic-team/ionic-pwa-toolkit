@@ -2,6 +2,20 @@
 
 The Ionic PWA Toolkit is the recommended way to build production ready PWAs with Ionic. This toolkit gets you started with using [Stencil](https://stenciljs.com/), Ionic Core and Ionic PWA hosting. This combination of tools gives you the ability to build a fast, efficient PWA with 0 config needed and all the best practices built in out of the box.
 
+## What does this include
+
+- Stencil
+- Ionic
+- Push Notifications setup
+- Showing a toast when a new version of the PWA is available
+- Unit Tests
+- Pre-rendering
+- zero config lazy loading
+- zero config code splitting
+- Polyfills selectively loaded depending on the browser support
+- ES6 by default for new browsers, ES5 for older browsers
+- Everything needed for an add to homescreen PWA (service worker and web manifest)
+
 ## Getting Started
 
 To start building a PWA with the Ionic PWA Toolkit, clone this repo to a new directory:
