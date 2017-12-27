@@ -14,7 +14,8 @@ The Ionic PWA Toolkit is the recommended way to build production ready PWAs with
 - zero config code splitting
 - Polyfills selectively loaded depending on the browser support
 - ES6 by default for new browsers, ES5 for older browsers
-- Everything needed for an add to homescreen PWA (service worker and web manifest)
+- Everything needed for an add to homescreen PWA (service worker, web manifest and iOS meta tags)
+- lazy-img component for lazy loading below the fold images
 
 ## Getting Started
 
