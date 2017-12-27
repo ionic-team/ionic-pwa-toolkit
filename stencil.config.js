@@ -1,7 +1,8 @@
 exports.config = {
   bundles: [
     { components: ['my-app', 'app-home'] },
-    { components: ['app-profile'] }
+    { components: ['app-profile'] },
+    { components: ['lazy-img'] }
   ],
   collections: [
     { name: '@stencil/router' },

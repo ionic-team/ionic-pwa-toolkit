@@ -10,29 +10,29 @@ import '@ionic/core';
 
 
 import {
-  AppHome as AppHome
-} from './components/app-home/app-home';
+  LazyImg as LazyImg
+} from './components/lazy-img/lazy-img';
 
 declare global {
-  interface HTMLAppHomeElement extends AppHome, HTMLElement {
+  interface HTMLLazyImgElement extends LazyImg, HTMLElement {
   }
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
+  var HTMLLazyImgElement: {
+    prototype: HTMLLazyImgElement;
+    new (): HTMLLazyImgElement;
   };
   interface HTMLElementTagNameMap {
-    "app-home": HTMLAppHomeElement;
+    "lazy-img": HTMLLazyImgElement;
   }
   interface ElementTagNameMap {
-    "app-home": HTMLAppHomeElement;
+    "lazy-img": HTMLLazyImgElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "app-home": JSXElements.AppHomeAttributes;
+      "lazy-img": JSXElements.LazyImgAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppHomeAttributes extends HTMLAttributes {
+    export interface LazyImgAttributes extends HTMLAttributes {
       
     }
   }
