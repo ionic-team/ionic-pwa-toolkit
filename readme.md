@@ -6,6 +6,7 @@ The Ionic PWA Toolkit is the recommended way to build production ready PWAs with
 
 - Stencil
 - Ionic
+- Routing
 - Push Notifications setup
 - Showing a toast when a new version of the PWA is available
 - Unit Tests
