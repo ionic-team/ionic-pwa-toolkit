@@ -2,7 +2,7 @@ import { Component, Listen, Prop, State } from '@stencil/core';
 import { MatchResults } from '@stencil/router';
 import { ToastController } from '@ionic/core';
 
-import { urlB64ToUint8Array } from '../../global/utils';
+import { urlB64ToUint8Array } from '../../helpers/utils';
 
 
 @Component({
