@@ -1,9 +1,7 @@
-importScripts('workbox-sw.prod.v2.1.2.js');
+importScripts('workbox-v3.0.0-alpha.3/workbox-sw.js')
 
-const workboxSW = new self.WorkboxSW({
-  "skipWaiting": true,
-  "clientsClaim": true
-});
+self.workbox.skipWaiting();
+self.workbox.clientsClaim();
 
 /*
   This is our code to handle push events.
@@ -22,4 +20,4 @@ self.addEventListener('push', (event) => {
   event.waitUntil(self.registration.showNotification(title, options));
 });
 
-workboxSW.precache([]);
+self.workbox.precaching.precacheAndRoute([]);
