@@ -60,7 +60,6 @@ To ensure the fastest possible load time for your PWA, we recommend setting up H
 
 ** Note: In an upcoming release we will be automatically generating this H2 push config for you meaning you will not have to do any of the above anymore **
 
-
 ## Service Workers
 
 For info on how Service Workers work in Stencil check out our [Service Worker docs](https://stenciljs.com/docs/service-workers).
@@ -71,6 +70,9 @@ In some cases, for instance when you are working on adding [web push notificatio
 
 To do this with the Ionic PWA toolkit simply run `npm run devWithSW`. This will start a dev build, but with the Service Worker also getting livereloaded.
 
+## Lazy Loading Images
+
+Check out the `lazy-img` component in `src/components/lazy-img/lazy-img.tsx`.
 
 ## Unit Tests
 
