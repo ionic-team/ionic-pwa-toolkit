@@ -1,11 +1,11 @@
 # Ionic PWA Toolkit
 
-The Ionic PWA Toolkit is the recommended way to build production ready PWAs with Ionic. This toolkit gets you started with using [Stencil](https://stenciljs.com/), Ionic Core and Ionic PWA hosting. This combination of tools gives you the ability to build a fast, efficient PWA with zero config needed and all the best practices built in out of the box.
+The Ionic PWA Toolkit is the recommended way to build production ready Progressive Web Apps (PWAs) with Ionic. This toolkit gets you started with [Stencil](https://stenciljs.com/), Ionic Core, and Ionic PWA hosting. This combination of tools gives you the ability to build a fast, efficient PWA with zero config needed and best practices out of the box.
 
-## What does this include
+## Features Included in the Ionic PWA Toolkit
 
-- Stencil
-- Ionic
+- Stencil for easily building and loading standardized Web Components
+- Ionic Framework
 - Routing
 - Push Notifications setup
 - Showing a toast when a new version of the PWA is available
@@ -47,7 +47,9 @@ A production build includes everything needed for your project to be a PWA right
 
 ## Hosting
 
-We currently recommend [Firebase Hosting](https://firebase.google.com/docs/hosting/) as the best option for hosting PWAs built with the Ionic PWA Toolkit. Firebase Hosting gives you HTTPS and HTTP2 out of the box which are both crucial to hosting PWAs.
+For top PWA performance, your app should be hosted with a hosting provider that supports HTTPS and HTTP2 out of the box.
+
+We currently recommend [Firebase Hosting](https://firebase.google.com/docs/hosting/), though we are working on Ionic PWA Hosting with even more features.
 
 ### H2 Push
 
@@ -91,3 +93,7 @@ npm run test.watch
 ## Testing your PWA's performance
 
 We recommend using https://www.webpagetest.org/easy with the `Run Lighthouse Audit` option turned on. This will give you an in depth look into your PWAs load performance on the average device connected to the average network. For more info on how to use webpagetest check out https://zoompf.com/blog/2015/07/the-seo-experts-guide-to-web-performance-using-webpagetest-2.
+
+## Why Stencil?
+
+Stencil is a tool we developed at Ionic to make it easy to build Web Components and load them in an efficient manner. Generally, using a classic framework like Angular or React will make building a fast PWA challenging. Stencil provides a similar API to Angular and React but is focused on meeting the performance demands of modern Progressive Web Apps.
