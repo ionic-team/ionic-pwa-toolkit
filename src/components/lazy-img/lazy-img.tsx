@@ -11,8 +11,7 @@ import { Component, Element, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'lazy-img',
-  styleUrl: 'lazy-img.scss',
-  shadow: true
+  styleUrl: 'lazy-img.scss'
 })
 export class LazyImg {
 
@@ -37,7 +36,7 @@ export class LazyImg {
   }
 
   handleImage() {
-    const image: HTMLImageElement = this.el.shadowRoot.querySelector('img');
+    const image: HTMLImageElement = this.el.querySelector('img');
     image.setAttribute('src', image.getAttribute('data-src'));
     image.onload = () => {
       image.removeAttribute('data-src');
@@ -59,7 +58,7 @@ export class LazyImg {
         }
       })
 
-      this.io.observe(this.el.shadowRoot.querySelector('img'));
+      this.io.observe(this.el.querySelector('img'));
     } else {
       // fall back to just loading the image for Safari and IE
       this.handleImage();
