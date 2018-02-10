@@ -44,8 +44,8 @@ To build your PWA for production, run:
 ```bash
 npm run build
 ```
-A production build includes everything needed for your project to be a PWA right out of the box. This includes both a Web Manifest (src/manifest.json) and a Service Worker (www/sw.js).
 
+A production build includes everything needed for your project to be a PWA right out of the box. This includes both a Web Manifest (src/manifest.json) and a Service Worker (www/sw.js).
 
 ## Hosting
 
@@ -82,13 +82,13 @@ Check out the `lazy-img` component in `src/components/lazy-img/lazy-img.tsx`.
 
 To run the unit tests once, run:
 
-```
+```bash
 npm test
 ```
 
 To run the unit tests and watch for file changes during development, run:
 
-```
+```bash
 npm run test.watch
 ```
 
