@@ -4,9 +4,11 @@
     "allowUnreachableCode": false,
     "declaration": false,
     "experimentalDecorators": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
     "lib": [
       "dom",
-      "es2015"
+      "es2017"
     ],
     "moduleResolution": "node",
     "module": "es2015",
