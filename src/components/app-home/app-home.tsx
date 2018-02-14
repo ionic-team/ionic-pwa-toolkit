@@ -9,8 +9,8 @@ export class AppHome {
 
   render() {
     return (
-      <ion-page class='show-page'>
-        <ion-header md-height='56px'>
+      <ion-page>
+        <ion-header>
           <ion-toolbar color='primary'>
             <ion-title>Ionic PWA Toolkit</ion-title>
           </ion-toolbar>
