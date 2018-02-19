@@ -28,7 +28,10 @@ describe('app-profile', () => {
       }
       
       await flush(element);
-      expect(element.textContent).toEqual('Hello! My name is stencil. My name was passed in through a route param!');
+
+      const pElement = element.querySelector('ion-content p');
+
+      expect(pElement.textContent).toEqual('Hello! My name is stencil. My name was passed in through a route param!');
     });
   });
 });
