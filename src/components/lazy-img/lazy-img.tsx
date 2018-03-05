@@ -24,10 +24,16 @@ export class LazyImg {
 
   @Event() lazyImgloaded: EventEmitter<HTMLImageElement>;
 
-  io: IntersectionObserver;
+  image: HTMLImageElement;
+  io: IntersectionObserver | null;
 
   componentDidLoad() {
+    this.image = this.el.querySelector('img') as HTMLImageElement;
     this.addIntersectionObserver();
+  }
+
+  componentDidUnload() {
+    this.removeIntersectionObserver();
   }
 
   componentWillUpdate() {
@@ -38,8 +44,8 @@ export class LazyImg {
   }
 
   handleImage() {
-    const image: HTMLImageElement = this.el.querySelector('img');
-    image.setAttribute('src', image.getAttribute('data-src'));
+    const image = this.image;
+    image.setAttribute('src', image.getAttribute('data-src') || '');
     image.onload = () => {
       image.removeAttribute('data-src');
       this.lazyImgloaded.emit(image);
@@ -60,8 +66,7 @@ export class LazyImg {
           this.removeIntersectionObserver();
         }
       })
-
-      this.io.observe(this.el.querySelector('img'));
+      this.io.observe(this.image);
     } else {
       // fall back to just loading the image for Safari and IE
       this.handleImage();
