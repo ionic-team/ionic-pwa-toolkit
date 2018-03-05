@@ -28,7 +28,6 @@ export class LazyImg {
   io: IntersectionObserver | null;
 
   componentDidLoad() {
-    this.image = this.el.querySelector('img') as HTMLImageElement;
     this.addIntersectionObserver();
   }
 
@@ -82,7 +81,7 @@ export class LazyImg {
 
   render() {
     return (
-      <img data-src={this.src} alt={this.alt}></img>
+      <img ref={(el) => this.image = el} data-src={this.src} alt={this.alt}></img>
     );
   }
 }
