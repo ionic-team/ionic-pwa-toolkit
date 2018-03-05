@@ -57,7 +57,7 @@ export class LazyImg {
       return;
     }
     if ('IntersectionObserver' in window) {
-      this.io = new IntersectionObserver((data: any) => {
+      this.io = new IntersectionObserver((data) => {
         // because there will only ever be one instance
         // of the element we are observing
         // we can just use data[0]
