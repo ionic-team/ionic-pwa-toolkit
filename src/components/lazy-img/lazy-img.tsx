@@ -81,7 +81,7 @@ export class LazyImg {
 
   render() {
     return (
-      <img ref={(el) => this.image = el} data-src={this.src} alt={this.alt}></img>
+      <img ref={(el: HTMLImageElement) => this.image = el} data-src={this.src} alt={this.alt}></img>
     );
   }
 }
