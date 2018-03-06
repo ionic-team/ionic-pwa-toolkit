@@ -44,8 +44,8 @@ To build your PWA for production, run:
 ```bash
 npm run build
 ```
-A production build includes everything needed for your project to be a PWA right out of the box. This includes both a Web Manifest (src/manifest.json) and a Service Worker (www/sw.js).
 
+A production build includes everything needed for your project to be a PWA right out of the box. This includes both a Web Manifest (src/manifest.json) and a Service Worker (www/sw.js).
 
 ## Hosting
 
@@ -82,13 +82,13 @@ Check out the `lazy-img` component in `src/components/lazy-img/lazy-img.tsx`.
 
 To run the unit tests once, run:
 
-```
+```bash
 npm test
 ```
 
 To run the unit tests and watch for file changes during development, run:
 
-```
+```bash
 npm run test.watch
 ```
 
@@ -96,6 +96,6 @@ npm run test.watch
 
 We recommend using https://www.webpagetest.org/easy with the `Run Lighthouse Audit` option turned on. This will give you an in depth look into your PWAs load performance on the average device connected to the average network. For more info on how to use webpagetest check out https://zoompf.com/blog/2015/07/the-seo-experts-guide-to-web-performance-using-webpagetest-2.
 
-## Why Stencil?
+## Why Stencil
 
 Stencil is a tool we developed at Ionic to make it easy to build Web Components and load them in an efficient manner. Generally, using a classic framework like Angular or React will make building a fast PWA challenging. Stencil provides a similar API to Angular and React but is focused on meeting the performance demands of modern Progressive Web Apps.
