@@ -30,7 +30,7 @@ export class AppProfile {
   }
 
   @Listen('ionChange')
-  subscribeToNotify($event) {
+  subscribeToNotify($event: CustomEvent) {
     console.log($event.detail.checked);
 
     if ($event.detail.checked === true) {
@@ -40,28 +40,30 @@ export class AppProfile {
 
   handleSub() {
     // get our service worker registration
-    navigator.serviceWorker.getRegistration().then((reg: ServiceWorkerRegistration) => {
+    navigator.serviceWorker.getRegistration().then((reg) => {
 
-      // get push subscription
-      reg.pushManager.getSubscription().then((sub: PushSubscription) => {
-
-        // if there is no subscription that means
-        // the user has not subscribed before
-        if (sub === null) {
-          // user is not subscribed
-          reg.pushManager.subscribe({
-            userVisibleOnly: true,
-            applicationServerKey: this.publicServerKey
-          })
+      // check if service worker is registered
+      if (reg) {
+        // get push subscription
+        reg.pushManager.getSubscription().then((sub) => {
+  
+          // if there is no subscription that means
+          // the user has not subscribed before
+          if (sub === null) {
+            // user is not subscribed
+            reg.pushManager.subscribe({
+              userVisibleOnly: true,
+              applicationServerKey: this.publicServerKey
+            })
             .then((sub: PushSubscription) => {
               // our user is now subscribed
               // lets reflect this in our UI
               console.log('web push subscription: ', sub);
-
               this.notify = true;
             })
-        }
-      })
+          }
+        })
+      }
     })
   }
 

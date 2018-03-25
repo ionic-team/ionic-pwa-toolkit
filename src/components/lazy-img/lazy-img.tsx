@@ -24,10 +24,15 @@ export class LazyImg {
 
   @Event() lazyImgloaded: EventEmitter<HTMLImageElement>;
 
-  io: IntersectionObserver;
+  image: HTMLImageElement;
+  io: IntersectionObserver | null;
 
   componentDidLoad() {
     this.addIntersectionObserver();
+  }
+
+  componentDidUnload() {
+    this.removeIntersectionObserver();
   }
 
   componentWillUpdate() {
@@ -38,7 +43,7 @@ export class LazyImg {
   }
 
   handleImage() {
-    const image: HTMLImageElement = this.el.querySelector('img');
+    const image = this.image;
     image.setAttribute('src', image.getAttribute('data-src'));
     image.onload = () => {
       image.removeAttribute('data-src');
@@ -51,7 +56,7 @@ export class LazyImg {
       return;
     }
     if ('IntersectionObserver' in window) {
-      this.io = new IntersectionObserver((data: any) => {
+      this.io = new IntersectionObserver((data) => {
         // because there will only ever be one instance
         // of the element we are observing
         // we can just use data[0]
@@ -60,8 +65,7 @@ export class LazyImg {
           this.removeIntersectionObserver();
         }
       })
-
-      this.io.observe(this.el.querySelector('img'));
+      this.io.observe(this.image);
     } else {
       // fall back to just loading the image for Safari and IE
       this.handleImage();
@@ -77,7 +81,7 @@ export class LazyImg {
 
   render() {
     return (
-      <img data-src={this.src} alt={this.alt}></img>
+      <img ref={(el) => this.image = el as HTMLImageElement} data-src={this.src} alt={this.alt}></img>
     );
   }
 }
