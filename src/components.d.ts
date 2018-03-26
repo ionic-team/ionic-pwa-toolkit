@@ -24,12 +24,8 @@ declare global {
 }
 
 import 'ionicons';
-import '@stencil/router';
 import '@ionic/core';
 
-import {
-  MatchResults,
-} from '@stencil/router';
 import {
   EventEmitter,
 } from '@stencil/core';
@@ -63,7 +59,7 @@ declare global {
 
 declare global {
   interface HTMLAppProfileElement extends HTMLStencilElement {
-    'match': MatchResults;
+    'name': string;
   }
   var HTMLAppProfileElement: {
     prototype: HTMLAppProfileElement;
@@ -82,7 +78,7 @@ declare global {
   }
   namespace JSXElements {
     export interface AppProfileAttributes extends HTMLAttributes {
-      'match'?: MatchResults;
+      'name'?: string;
     }
   }
 }

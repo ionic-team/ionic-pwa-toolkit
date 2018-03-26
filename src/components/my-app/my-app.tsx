@@ -41,13 +41,12 @@ export class MyApp {
     return (
       <ion-app>
         <main>
-          <stencil-router>
-            <stencil-route url='/' component='app-home' exact={true}>
-            </stencil-route>
+          <ion-router useHash={false}>
+            <ion-route url='/' component='app-home'></ion-route>
+            <ion-route url='/profile/:name' component='app-profile'></ion-route>
 
-            <stencil-route url='/profile/:name' component='app-profile'>
-            </stencil-route>
-          </stencil-router>
+            <ion-nav></ion-nav>
+          </ion-router>
         </main>
       </ion-app>
     );
