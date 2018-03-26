@@ -19,6 +19,7 @@ export class LazyImg {
 
   @Prop() src: string;
   @Prop() alt: string;
+  @Prop() width: number;
 
   @State() oldSrc: string;
 
@@ -81,7 +82,7 @@ export class LazyImg {
 
   render() {
     return (
-      <img ref={(el) => this.image = el as HTMLImageElement} data-src={this.src} alt={this.alt}></img>
+      <img ref={(el) => this.image = el as HTMLImageElement} data-src={this.src} alt={this.alt} width={this.width}></img>
     );
   }
 }
