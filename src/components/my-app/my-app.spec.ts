@@ -1,17 +1,19 @@
-import { render } from '@stencil/core/testing';
+import { TestWindow } from '@stencil/core/testing';
 import { MyApp } from './my-app';
 
 describe('my-app', () => {
-  it('should build', () => {
-    expect(new MyApp()).toBeTruthy();
+
+  it('should update', async () => {
+    await window.flush();
   });
 
-  describe('rendering', () => {
-    beforeEach(async () => {
-      await render({
-        components: [MyApp],
-        html: '<my-app></my-app>'
-      });
+  let element: HTMLAppProfileElement;
+  let window: TestWindow;
+  beforeEach(async () => {
+    window = new TestWindow();
+    element = await window.load({
+      components: [MyApp],
+      html: '<my-app></my-app>'
     });
   });
 });

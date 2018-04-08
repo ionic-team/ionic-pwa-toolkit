@@ -1,5 +1,4 @@
 const sass = require('@stencil/sass');
-const autoprefixer = require('autoprefixer');
 
 exports.config = {
   outputTargets: [
