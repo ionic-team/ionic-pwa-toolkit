@@ -1,7 +1,7 @@
 const sass = require('@stencil/sass');
 
 exports.config = {
-  outputTarget: [
+  outputTargets: [
     {
       type: 'www',
       serviceWorker: {
