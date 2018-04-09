@@ -88,6 +88,7 @@ declare global {
   interface HTMLLazyImgElement extends HTMLStencilElement {
     'alt': string;
     'src': string;
+    'width': number;
   }
   var HTMLLazyImgElement: {
     prototype: HTMLLazyImgElement;
@@ -109,6 +110,7 @@ declare global {
       'alt'?: string;
       'onLazyImgloaded'?: (event: CustomEvent<HTMLImageElement>) => void;
       'src'?: string;
+      'width'?: number;
     }
   }
 }
