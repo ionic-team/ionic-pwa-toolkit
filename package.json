@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@ionic/core": "4.0.0-alpha.1",
-    "@stencil/core": "^0.7.18",
+    "@stencil/core": "^0.7.22",
     "@stencil/router": "latest",
     "micromatch": "^3.1.10"
   },
