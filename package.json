@@ -16,14 +16,9 @@
     "test.watch": "jest --watch --no-cache"
   },
   "dependencies": {
-    "@ionic/core": "4.0.0-alpha.1",
-<<<<<<< HEAD
-    "@stencil/core": "^0.7.22",
-    "@stencil/router": "latest",
+    "@ionic/core": "4.0.0-alpha.2",
+    "@stencil/core": "0.7.24",
     "micromatch": "^3.1.10"
-=======
-    "@stencil/core": "0.7.20"
->>>>>>> 056032ec009f196bd30a9f84bb2b2f7351aaf98c
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
