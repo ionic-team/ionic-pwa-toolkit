@@ -3,7 +3,7 @@ import { MyApp } from './my-app';
 
 describe('my-app', () => {
 
-  it('should update', async () => {
+   it('should update', async () => {
     await window.flush();
   });
 
@@ -15,5 +15,10 @@ describe('my-app', () => {
       components: [MyApp],
       html: '<my-app></my-app>'
     });
+  });
+
+  it('should build', async () => {
+    await window.flush();
+    expect(new MyApp()).toBeTruthy();
   });
 });
