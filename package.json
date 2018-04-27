@@ -7,7 +7,7 @@
     "dist/"
   ],
   "scripts": {
-    "build": "stencil build --prerender",
+    "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "devWithSW": "sd concurrent \"stencil build --dev --service-worker --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
@@ -17,8 +17,7 @@
   },
   "dependencies": {
     "@ionic/core": "4.0.0-alpha.3",
-    "@stencil/core": "0.7.26",
-    "micromatch": "^3.1.10"
+    "@stencil/core": "0.7.26"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
