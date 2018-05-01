@@ -1,8 +1,6 @@
 import { Component, Listen, Prop, State } from '@stencil/core';
-import { Toast } from '@ionic/core';
 
 import { urlB64ToUint8Array } from '../../helpers/utils';
-
 
 @Component({
   tag: 'app-profile',
@@ -10,7 +8,7 @@ import { urlB64ToUint8Array } from '../../helpers/utils';
 })
 export class AppProfile {
 
-  @Prop({ connect: 'ion-toast-controller' }) toastCtrl: Toast;
+  @Prop({ connect: 'ion-toast-controller' }) toastCtrl: HTMLIonToastControllerElement;
   @Prop() name: string;
 
   @State() notify: boolean;
