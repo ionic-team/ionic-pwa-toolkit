@@ -9,10 +9,12 @@ exports.config = {
       }
     }
   ],
+  globalScript: 'src/global/app.ts',
   globalStyle: 'src/global/app.css',
   plugins: [
     sass()
-  ]
+  ],
+  enableCache: false
 };
 
 exports.devServer = {
