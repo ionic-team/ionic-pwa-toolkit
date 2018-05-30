@@ -13,9 +13,12 @@ declare global {
   }
   namespace JSXElements {}
 
+  interface HTMLElement {
+    componentOnReady?: () => Promise<this | null>;
+  }
+
   interface HTMLStencilElement extends HTMLElement {
     componentOnReady(): Promise<this>;
-    componentOnReady(done: (ele?: this) => void): void;
 
     forceUpdate(): void;
   }
@@ -23,12 +26,9 @@ declare global {
   interface HTMLAttributes {}
 }
 
-import 'ionicons';
 import '@ionic/core';
+import 'ionicons';
 
-import {
-  EventEmitter,
-} from '@stencil/core';
 
 declare global {
 
@@ -91,44 +91,6 @@ declare global {
   namespace JSXElements {
     export interface AppProfileAttributes extends HTMLAttributes {
       'name'?: string;
-    }
-  }
-}
-
-
-declare global {
-
-  namespace StencilComponents {
-    interface LazyImg {
-      'alt': string;
-      'src': string;
-      'width': number;
-    }
-  }
-
-  interface HTMLLazyImgElement extends StencilComponents.LazyImg, HTMLStencilElement {}
-
-  var HTMLLazyImgElement: {
-    prototype: HTMLLazyImgElement;
-    new (): HTMLLazyImgElement;
-  };
-  interface HTMLElementTagNameMap {
-    'lazy-img': HTMLLazyImgElement;
-  }
-  interface ElementTagNameMap {
-    'lazy-img': HTMLLazyImgElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      'lazy-img': JSXElements.LazyImgAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface LazyImgAttributes extends HTMLAttributes {
-      'alt'?: string;
-      'onLazyImgloaded'?: (event: CustomEvent<HTMLImageElement>) => void;
-      'src'?: string;
-      'width'?: number;
     }
   }
 }

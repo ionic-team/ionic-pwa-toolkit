@@ -5,7 +5,7 @@ import { urlB64ToUint8Array } from '../../helpers/utils';
 
 @Component({
   tag: 'app-profile',
-  styleUrl: 'app-profile.scss'
+  styleUrl: 'app-profile.css'
 })
 export class AppProfile {
 
@@ -77,7 +77,7 @@ export class AppProfile {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content>
+      <ion-content padding>
         <p>
           Hello! My name is {this.name}.
           My name was passed in through a route param!

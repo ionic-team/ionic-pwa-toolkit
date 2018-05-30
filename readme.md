@@ -18,7 +18,8 @@ The Ionic PWA Toolkit is the recommended way to build production ready Progressi
 - Polyfills selectively loaded depending on the browser support
 - ES6 by default for new browsers, ES5 for older browsers
 - Everything needed for an add to homescreen PWA (service worker, web manifest and iOS meta tags)
-- lazy-img component for lazy loading below the fold images
+- ion-img component for lazy loading below the fold images
+- Theming using CSS variables
 
 ## Getting Started
 
