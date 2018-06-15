@@ -1,33 +1,30 @@
-# Ionic PWA Toolkit Beta
+# Ionic PWA Toolkit Alpha
 
-The Ionic PWA Toolkit is the recommended way to build production ready Progressive Web Apps (PWAs) with Ionic. This toolkit gets you started with [Stencil](https://stenciljs.com/) and an early release of Ionic (4.x+). This combination of tools gives you the ability to build a fast, efficient PWA with zero config needed and best practices out of the box.
+The PWA Toolkit is a starting point for building Progressive Web Apps using Ionic and Stencil.
+This combination of tools gives you the ability to build a fast, efficient PWA out of the box.
 
-***Note: This project is a beta and uses an early release of Ionic 4.***
+Note: This project is **ALPHA** and uses an early release of `@ionic/core`
 
-## Features Included in the Ionic PWA Toolkit
+## Features
 
-- Stencil for easily building and loading standardized Web Components
-- Ionic Framework
-- Routing
-- Push Notifications setup
-- Showing a toast when a new version of the PWA is available
-- Unit Tests
-- Pre-rendering
-- zero config lazy loading
-- zero config code splitting
-- Polyfills selectively loaded depending on the browser support
-- ES6 by default for new browsers, ES5 for older browsers
-- Everything needed for an add to homescreen PWA (service worker, web manifest and iOS meta tags)
-- ion-img component for lazy loading below the fold images
-- Theming using CSS variables
+* `@ionic/core` for the UI.
+* Stencil for the application logic and routing
+* Push Notifications setup
+* Unit Tests
+* Pre-rendering
+* Lazy-loading and code splitting
+* Intelligent Polyfills
+* Modern mode: ES6/ESM for new browser, ES5 for older
+* Service Worker, App manifest, iOS meta tags
+* Theming using CSS variables
 
 ## Getting Started
 
-To start building a PWA with the Ionic PWA Toolkit, clone this repo to a new directory:
+To start building, clone this repo to a new directory:
 
 ```bash
-git clone https://github.com/ionic-team/ionic-pwa-toolkit.git my-pwa
-cd my-pwa
+git clone https://github.com/ionic-team/ionic-pwa-toolkit.git my-app
+cd my-app
 git remote rm origin
 ```
 
@@ -40,44 +37,43 @@ npm start
 
 ## Production
 
-To build your PWA for production, run:
+To build for production, run:
 
 ```bash
 npm run build
 ```
 
-A production build includes everything needed for your project to be a PWA right out of the box. This includes both a Web Manifest (src/manifest.json) and a Service Worker (www/sw.js).
+A production build includes:
+
+* Minified code bundles
+* Generated Service workes
+* App manifest
 
 ## Hosting
 
-For top PWA performance, your app should be hosted with a hosting provider that supports HTTPS and HTTP2 out of the box.
+Apps should be hosted on through HTTPS, and if possible, through a provider that supports HTTP2.
+One provider that does support this is [Firebase Hosting](https://firebase.google.com/docs/hosting/).
 
-We currently recommend [Firebase Hosting](https://firebase.google.com/docs/hosting/), though we are working on Ionic PWA Hosting with even more features.
+## H2 Push
 
-### H2 Push
+We recommend setting up HTTP2 Push on Firebase. H2 Push may sound complicated, but it's actually a simple concept. To learn about it, take a look at this [article](https://en.wikipedia.org/wiki/HTTP/2_Server_Push).
 
-To ensure the fastest possible load time for your PWA, we recommend setting up H2 push on Firebase. [Here is an example](https://github.com/ionic-team/ionic-stencil-hn-app/blob/master/firebase.json#L19-L25) of what this looks like in your `firebase.json` file. Lets go over the steps of how to setup H2 push properly for your Ionic PWA:
+To set this up for `my-app`:
 
-- Do a production build of your PWA with `npm run build`
-- Serve your WWW folder locally using a local http server and open it in Chrome. https://www.npmjs.com/package/http-server works pretty well for this. If using the http-server package you can serve your www folder by running `http-server www`.
-- Open Chrome Dev Tools on your PWA and open the [network tab of your chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/network-performance/reference). Reload the page and you should see all of your JS files show up in the network tab. Besides the `sw.js` file, these are the files you want to H2 push.
-- You can then put these files in your push header setup by following this syntax https://github.com/ionic-team/ionic-stencil-hn-app/blob/master/firebase.json#L23.
-
-** Note: In an upcoming release we will be automatically generating this H2 push config for you meaning you will not have to do any of the above anymore **
+* Do a production build of the app: `npm run build`
+* Serve your WWW folder locally using a local http server and open in your browser.
+  * https://www.npmjs.com/package/http-server works pretty well for this. You can serve your www folder by running `http-server www`.
+* Open the DevTools and look at the network tab.
+  * Reload the page and you should see all of your files show up in the network tab. Excluding the `sw.js` file, these are the files you want to H2 push.
+* List these files in the link headers of your firebase.json file. For a syntax reference, review this [article](https://w3c.github.io/preload/#server-push-http-2)
 
 ## Service Workers
 
-For info on how Service Workers work in Stencil check out our [Service Worker docs](https://stenciljs.com/docs/service-workers).
+Service workers are generated via the Stencil build tool. For more information on how they can be configured, see the [Service Worker docs](https://stenciljs.com/docs/service-workers).
 
 ## Developing with a Service Worker
 
-In some cases, for instance when you are working on adding [web push notifications](https://developers.google.com/web/fundamentals/push-notifications/) or [background sync](https://developers.google.com/web/updates/2015/12/background-sync), both which require a Service Worker, it can be handy to be able to dev builds with a service worker.
-
-To do this with the Ionic PWA toolkit simply run `npm run devWithSW`. This will start a dev build, but with the Service Worker also getting livereloaded.
-
-## Lazy Loading Images
-
-Check out the `lazy-img` component in `src/components/lazy-img/lazy-img.tsx`.
+For most cases, you'll want to develop your app without generating a Service Worker. But if you'd like to test out Web Push Notifications or Background Sync, you'll need to have one generated. To generate a Service Worker during dev builds, we've added the npm script `devWithSW`. This will start a dev build and generate a Service Worker as well.
 
 ## Unit Tests
 
@@ -95,8 +91,6 @@ npm run test.watch
 
 ## Testing your PWA's performance
 
-We recommend using https://www.webpagetest.org/easy with the `Run Lighthouse Audit` option turned on. This will give you an in depth look into your PWAs load performance on the average device connected to the average network. For more info on how to use webpagetest check out https://zoompf.com/blog/2015/07/the-seo-experts-guide-to-web-performance-using-webpagetest-2.
-
-## Why Stencil
-
-Stencil is a tool we developed at Ionic to make it easy to build Web Components and load them in an efficient manner. Generally, using a classic framework like Angular or React will make building a fast PWA challenging. Stencil provides a similar API to Angular and React but is focused on meeting the performance demands of modern Progressive Web Apps.
+We recommend using https://www.webpagetest.org/easy with the `Run Lighthouse Audit` option turned on.
+This will give you an in depth look into your app's load performance on the average device connected to the average network.
+For more info on how to use webpagetest check out [this article](https://zoompf.com/blog/2015/07/the-seo-experts-guide-to-web-performance-using-webpagetest-2)

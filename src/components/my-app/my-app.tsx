@@ -6,8 +6,8 @@ import { Component, Prop, Listen } from '@stencil/core';
   styleUrl: 'my-app.css'
 })
 export class MyApp {
-
-  @Prop({ connect: 'ion-toast-controller' }) toastCtrl: HTMLIonToastControllerElement;
+  @Prop({ connect: 'ion-toast-controller' })
+  toastCtrl: HTMLIonToastControllerElement;
 
   /**
    * Handle service worker updates correctly.
@@ -26,7 +26,7 @@ export class MyApp {
       closeButtonText: 'Reload'
     });
     await toast.present();
-    await toast.onWillDismiss()
+    await toast.onWillDismiss();
     window.location.reload();
   }
 
@@ -34,12 +34,11 @@ export class MyApp {
     return (
       <ion-app>
         <ion-router useHash={false}>
-          <ion-route url='/' component='app-home'></ion-route>
-          <ion-route url='/profile/:name' component='app-profile'></ion-route>
+          <ion-route url="/" component="app-home" />
+          <ion-route url="/profile/:name" component="app-profile" />
         </ion-router>
-        <ion-nav></ion-nav>
+        <ion-nav />
       </ion-app>
     );
   }
 }
-
