@@ -12,8 +12,8 @@
     "devWithSW": "sd concurrent \"stencil build --dev --service-worker --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
     "start": "npm run dev",
-    "test": "jest --no-cache",
-    "test.watch": "jest --watch --no-cache"
+    "test": "jest",
+    "test.watch": "jest --watch"
   },
   "dependencies": {
     "@ionic/core": "4.0.0-alpha.7",
