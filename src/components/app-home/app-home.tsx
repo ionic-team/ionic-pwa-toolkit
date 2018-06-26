@@ -1,27 +1,38 @@
-import { Component } from '@stencil/core';
+import { Component, State } from '@stencil/core';
+
+import Tunnel, { State as TunnelState } from '../../data/app-data';
+
+import { getData } from '../../helpers/data';
 
 @Component({
   tag: 'app-home',
   styleUrl: 'app-home.css'
 })
 export class AppHome {
+
+  @State() apiData: any[] = [];
+
+  async componentDidLoad() {
+    this.apiData = await getData();
+  }
+
   render() {
+    const tunnelState: TunnelState = {
+      data: this.apiData
+    };
+
     return [
       <ion-header>
         <ion-toolbar color="primary">
           <ion-title>Home</ion-title>
         </ion-toolbar>
       </ion-header>,
-      <ion-content padding>
-        <p>
-          Welcome to the PWA Toolkit. You can use this starter to build entire
-          app with web components using Stencil and ionic/core! Check out the
-          readme for everything that comes in this starter out of the box and
-          Check out our docs on{' '}
-          <a href="https://stenciljs.com">stenciljs.com</a> to get started.
-        </p>
+      <ion-content>
 
-        <ion-button href="/profile/ionic">Profile page</ion-button>
+        <Tunnel.Provider state={tunnelState}>
+          <app-list></app-list>
+        </Tunnel.Provider>
+
       </ion-content>
     ];
   }

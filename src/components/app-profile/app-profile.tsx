@@ -7,9 +7,8 @@ import { urlB64ToUint8Array } from '../../helpers/utils';
   styleUrl: 'app-profile.css'
 })
 export class AppProfile {
-  @Prop({ connect: 'ion-toast-controller' })
-  toastCtrl: HTMLIonToastControllerElement;
-  @Prop() name: string;
+  @Prop({ connect: 'ion-toast-controller' }) toastCtrl: HTMLIonToastControllerElement;
+  @Prop() item: number;
 
   @State() notify: boolean;
   @State() swSupport: boolean;
@@ -67,13 +66,12 @@ export class AppProfile {
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/" />
           </ion-buttons>
-          <ion-title>Profile: {this.name}</ion-title>
+          <ion-title>Item: {this.item}</ion-title>
         </ion-toolbar>
       </ion-header>,
       <ion-content padding>
         <p>
-          Hello! My name is {this.name}. My name was passed in through a route
-          param!
+          Hello! This is list item number {this.item}. This data was passed in through a route param!
         </p>
 
         {this.swSupport ? (

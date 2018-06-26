@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "build": "stencil build",
-    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
+    "dev": "sd concurrent \"stencil build --dev --watch --serve\"",
     "devWithSW": "sd concurrent \"stencil build --dev --service-worker --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
     "start": "npm run dev",
@@ -17,7 +17,8 @@
   },
   "dependencies": {
     "@ionic/core": "4.0.0-alpha.7",
-    "@stencil/core": "^0.9.10"
+    "@stencil/core": "^0.9.10",
+    "@stencil/state-tunnel": "0.0.7"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
