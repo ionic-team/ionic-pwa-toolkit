@@ -8,7 +8,6 @@ import { urlB64ToUint8Array } from '../../helpers/utils';
 })
 export class AppProfile {
   @Prop({ connect: 'ion-toast-controller' })
-  toastCtrl: HTMLIonToastControllerElement;
   @Prop() name: string;
 
   @State() notify: boolean;
