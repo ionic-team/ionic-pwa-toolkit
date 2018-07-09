@@ -9,7 +9,7 @@
   "scripts": {
     "build": "stencil build",
     "dev": "stencil build --dev --watch --serve",
-    "devWithSW": "stencil build --dev --service-worker --watch",
+    "devWithSW": "stencil build --dev --service-worker --watch --serve",
     "start": "npm run dev",
     "test": "jest",
     "test.watch": "jest --watch"
