@@ -1,10 +1,10 @@
 /* Document Level Styles */
 
 /*
-  The CSS Variables below can be used to theme your app.
-  For more info on CSS variables check out https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
- */
-
+  The imports below are needed to include our light dom css for global styles such as fonts and colors.
+  You can comment out any of these imports if you do not need that css. For example, if you have your own
+  global font family css then you can comment out the typography.css import.
+*/
  @import "~@ionic/core/css/normalize.css";
  @import "~@ionic/core/css/structure.css";
  @import "~@ionic/core/css/typography.css";
@@ -15,6 +15,10 @@
  @import "~@ionic/core/css/text-alignment.css";
  @import "~@ionic/core/css/text-transformation.css";
  
+ /*
+  The CSS Variables below can be used to theme your app.
+  For more info on CSS variables check out https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+ */
  :root {
    --ion-color-primary:                 #3880ff;
    --ion-color-secondary:               #0cd1e8;
