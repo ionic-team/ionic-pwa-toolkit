@@ -46,7 +46,7 @@ npm run build
 A production build includes:
 
 * Minified code bundles
-* Generated Service workes
+* Generated Service workers
 * App manifest
 
 ## Hosting
