@@ -15,9 +15,9 @@ export class AppHome {
       <ion-content padding>
         <p>
           Welcome to the PWA Toolkit. You can use this starter to build entire
-          app with web components using Stencil and ionic/core! Check out the
-          readme for everything that comes in this starter out of the box and
-          Check out our docs on{' '}
+          apps with web components using Stencil and ionic/core! Check out the
+          README for everything that comes in this starter out of the box and
+          check out our docs on{' '}
           <a href="https://stenciljs.com">stenciljs.com</a> to get started.
         </p>
 
