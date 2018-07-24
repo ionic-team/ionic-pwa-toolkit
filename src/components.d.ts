@@ -66,7 +66,7 @@ declare global {
 
   namespace StencilComponents {
     interface AppProfile {
-
+      'name': string;
     }
   }
 
@@ -89,7 +89,7 @@ declare global {
   }
   namespace JSXElements {
     export interface AppProfileAttributes extends HTMLAttributes {
-
+      'name'?: string;
     }
   }
 }
