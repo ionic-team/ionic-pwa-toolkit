@@ -5,44 +5,25 @@
   You can comment out any of these imports if you do not need that css. For example, if you have your own
   global font family css then you can comment out the typography.css import.
 */
- @import "~@ionic/core/css/normalize.css";
- @import "~@ionic/core/css/structure.css";
- @import "~@ionic/core/css/typography.css";
- @import "~@ionic/core/css/colors.css";
- 
- @import "~@ionic/core/css/padding.css";
- @import "~@ionic/core/css/float-elements.css";
- @import "~@ionic/core/css/text-alignment.css";
- @import "~@ionic/core/css/text-transformation.css";
- 
- /*
+
+/** Basic CSS for Ionic Apps */
+@import "~@ionic/core/css/normalize.css";
+@import "~@ionic/core/css/structure.css";
+@import "~@ionic/core/css/typography.css";
+@import "~@ionic/core/css/colors.css";
+
+/** Optional CSS utils that can be commented out */
+@import "~@ionic/core/css/padding.css";
+@import "~@ionic/core/css/float-elements.css";
+@import "~@ionic/core/css/text-alignment.css";
+@import "~@ionic/core/css/text-transformation.css";
+@import "~@ionic/core/css/flex-utils.css";
+
+/*
   The CSS Variables below can be used to theme your app.
-  For more info on CSS variables check out https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
- */
- :root {
-   --ion-color-primary:                 #3880ff;
-   --ion-color-secondary:               #0cd1e8;
-   --ion-color-tertiary:                #7044ff;
-   --ion-color-success:                 #10dc60;
-   --ion-color-warning:                 #ffce00;
-   --ion-color-danger:                  #f04141;
-   --ion-color-light:                   #f4f5f8;
-   --ion-color-medium:                  #989aa2;
-   --ion-color-dark:                    #222428;
- 
-   --ion-color-favorite:                #69BB7B;
-   --ion-color-twitter:                 #1da1f4;
-   --ion-color-google:                  #dc4a38;
-   --ion-color-vimeo:                   #23b6ea;
-   --ion-color-facebook:                #3b5998;
- 
-   --ion-color-angular:                 #ac282b;
-   --ion-color-communication:           #8e8d93;
-   --ion-color-tooling:                 #fe4c52;
-   --ion-color-services:                #fd8b2d;
-   --ion-color-design:                  #fed035;
-   --ion-color-workshop:                #69bb7b;
-   --ion-color-food:                    #3bc7c4;
-   --ion-color-documentation:           #b16be3;
-   --ion-color-navigation:              #6600cc;
- }
+  For more info on CSS variables check out:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+
+  More info about color theming using Ionic:
+  https://beta.ionicframework.com/docs/theming/color-generator
+*/

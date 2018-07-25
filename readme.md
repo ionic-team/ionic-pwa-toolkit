@@ -5,7 +5,7 @@ This combination of tools gives you the ability to build a fast, efficient PWA o
 
 Note: This project is **ALPHA** and uses an early release of `@ionic/core`.
 
-For more info check out our [homepage](https://ionicframework.com/pwa/toolkit)! 
+For more info check out our [homepage](https://ionicframework.com/pwa/toolkit)!
 
 ## Features
 
@@ -25,17 +25,9 @@ For more info check out our [homepage](https://ionicframework.com/pwa/toolkit)!
 To start building, clone this repo to a new directory:
 
 ```bash
-git clone https://github.com/ionic-team/ionic-pwa-toolkit.git my-app
-cd my-app
-git remote rm origin
+npm init stencil ionic-pwa
 ```
 
-and run:
-
-```bash
-npm install
-npm start
-```
 
 ## Production
 
@@ -75,7 +67,13 @@ Service workers are generated via the Stencil build tool. For more information o
 
 ## Developing with a Service Worker
 
-For most cases, you'll want to develop your app without generating a Service Worker. But if you'd like to test out Web Push Notifications or Background Sync, you'll need to have one generated. To generate a Service Worker during dev builds, we've added the npm script `devWithSW`. This will start a dev build and generate a Service Worker as well.
+For most cases, you'll want to develop your app without generating a Service Worker. But if you'd like to test out Web Push Notifications or Background Sync, you'll need to have one generated. To generate a Service Worker during dev builds, we've added the npm script:
+
+```
+npm run start.sw
+```
+
+This will start a dev build and generate a Service Worker as well.
 
 ## Unit Tests
 
