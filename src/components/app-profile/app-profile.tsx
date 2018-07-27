@@ -7,7 +7,7 @@ import { urlB64ToUint8Array } from '../../helpers/utils';
   styleUrl: 'app-profile.css'
 })
 export class AppProfile {
-  @Prop() name: string;
+  @Prop() item: string;
 
   @State() notify: boolean;
   @State() swSupport: boolean;
@@ -70,7 +70,7 @@ export class AppProfile {
       </ion-header>,
       <ion-content padding>
         <p>
-          Hello! This is list item number {this.item}. This data was passed in through a route param!
+          Hello! This is list item {this.item}. This data was passed in through a route param!
         </p>
 
         {this.swSupport ? (
