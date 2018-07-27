@@ -1,3 +1,4 @@
+// https://stenciljs.com/docs/config
 
 exports.config = {
   outputTargets: [
@@ -10,9 +11,4 @@ exports.config = {
   ],
   globalScript: 'src/global/app.ts',
   globalStyle: 'src/global/app.css'
-};
-
-exports.devServer = {
-  root: 'www',
-  watchGlob: '**/**'
 };

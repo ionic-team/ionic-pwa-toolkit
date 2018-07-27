@@ -7,8 +7,7 @@ import { urlB64ToUint8Array } from '../../helpers/utils';
   styleUrl: 'app-profile.css'
 })
 export class AppProfile {
-  @Prop({ connect: 'ion-toast-controller' }) toastCtrl: HTMLIonToastControllerElement;
-  @Prop() item: number;
+  @Prop() name: string;
 
   @State() notify: boolean;
   @State() swSupport: boolean;

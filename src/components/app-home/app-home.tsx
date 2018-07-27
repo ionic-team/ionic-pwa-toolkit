@@ -27,8 +27,8 @@ export class AppHome {
           <ion-title>Home</ion-title>
         </ion-toolbar>
       </ion-header>,
-      <ion-content>
 
+      <ion-content padding>
         <Tunnel.Provider state={tunnelState}>
           <app-list></app-list>
         </Tunnel.Provider>

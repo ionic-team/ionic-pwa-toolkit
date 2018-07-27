@@ -8,21 +8,16 @@
   ],
   "scripts": {
     "build": "stencil build",
-    "dev": "sd concurrent \"stencil build --dev --watch --serve\"",
-    "devWithSW": "sd concurrent \"stencil build --dev --service-worker --watch\" \"stencil-dev-server\" ",
-    "serve": "stencil-dev-server",
-    "start": "npm run dev",
+    "start": "stencil build --dev --watch --serve",
+    "start.sw": "npm run start --service-worker",
     "test": "jest",
     "test.watch": "jest --watch"
   },
   "dependencies": {
-    "@ionic/core": "4.0.0-alpha.7",
-    "@stencil/core": "^0.9.10",
-    "@stencil/state-tunnel": "0.0.7"
+    "@ionic/core": "4.0.0-beta.0",
+    "@stencil/core": "0.10.9"
   },
   "devDependencies": {
-    "@stencil/dev-server": "latest",
-    "@stencil/utils": "latest",
     "@types/jest": "^22.2.2",
     "jest": "^22.4.3"
   },
