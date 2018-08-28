@@ -1,13 +1,12 @@
-import '@ionic/core';
 import { Component, Prop, Listen } from '@stencil/core';
 
 @Component({
-  tag: 'my-app',
-  styleUrl: 'my-app.css'
+  tag: 'app-root',
+  styleUrl: 'app-root.css'
 })
-export class MyApp {
-  @Prop({ connect: 'ion-toast-controller' })
-  toastCtrl: HTMLIonToastControllerElement;
+export class AppRoot {
+  
+  @Prop({ connect: 'ion-toast-controller' }) toastCtrl: HTMLIonToastControllerElement;
 
   /**
    * Handle service worker updates correctly.
