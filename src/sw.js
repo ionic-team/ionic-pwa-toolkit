@@ -1,4 +1,4 @@
-importScripts('workbox-v3.4.1/workbox-sw.js')
+importScripts('workbox-v3.5.0/workbox-sw.js')
 
 self.workbox.skipWaiting();
 self.workbox.clientsClaim();
