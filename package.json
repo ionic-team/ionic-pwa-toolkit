@@ -2,46 +2,19 @@
   "name": "@ionic/pwa-toolkit",
   "private": true,
   "version": "0.0.1",
+  "author": "Ionic Team",
   "description": "Ionic PWA Toolkit",
+  "license": "MIT",
   "files": [
     "dist/"
   ],
   "scripts": {
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
-    "start.sw": "npm run start --service-worker",
-    "test": "jest",
-    "test.watch": "jest --watch"
+    "test": "stencil test --spec --e2e"
   },
   "dependencies": {
-    "@ionic/core": "4.0.0-beta.11",
-    "@stencil/core": "0.12.4"
-  },
-  "devDependencies": {
-    "@types/jest": "^22.2.2",
-    "jest": "^22.4.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ionic-team/ionic-pwa-toolkit.git"
-  },
-  "author": "Ionic Team",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
-  },
-  "homepage": "https://github.com/ionic-team/ionic-pwa-toolkit",
-  "jest": {
-    "transform": {
-      "^.+\\.(js|ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json",
-      "jsx"
-    ]
+    "@ionic/core": "4.0.0-beta.12",
+    "@stencil/core": "0.13.0"
   }
 }
