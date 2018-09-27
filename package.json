@@ -15,6 +15,6 @@
   },
   "dependencies": {
     "@ionic/core": "4.0.0-beta.12",
-    "@stencil/core": "0.13.0"
+    "@stencil/core": "0.13.2"
   }
 }
