@@ -8,25 +8,25 @@ describe('app-profile', () => {
   describe('normalization', () => {
     it('returns a blank string if the name is undefined', () => {
       const component = new AppProfile();
-      expect(component.normalize()).toEqual('');
+      expect(component.formattedName()).toEqual('');
     });
 
     it('capitalizes the first letter', () => {
       const component = new AppProfile();
       component.name = 'quincy';
-      expect(component.normalize()).toEqual('Quincy');
+      expect(component.formattedName()).toEqual('Quincy');
     });
 
     it('lower-cases the following letters', () => {
       const component = new AppProfile();
       component.name = 'JOSEPH';
-      expect(component.normalize()).toEqual('Joseph');
+      expect(component.formattedName()).toEqual('Joseph');
     });
 
     it('handles single letter names', () => {
       const component = new AppProfile();
       component.name = 'q';
-      expect(component.normalize()).toEqual('Q');
+      expect(component.formattedName()).toEqual('Q');
     });
   });
 });

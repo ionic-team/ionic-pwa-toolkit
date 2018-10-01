@@ -9,7 +9,7 @@ export class AppProfile {
   @State() state = false;
   @Prop() name: string;
 
-  normalize(): string {
+  formattedName(): string {
     if (this.name) {
       return this.name.substr(0, 1).toUpperCase() + this.name.substr(1).toLowerCase();
     }
@@ -29,7 +29,7 @@ export class AppProfile {
 
       <ion-content padding>
         <p>
-          {sayHello()}! My name is {this.name}. My name was passed in through a
+          {sayHello()}! My name is {this.formattedName()}. My name was passed in through a
           route param!
         </p>
 
