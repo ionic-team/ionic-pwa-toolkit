@@ -6,9 +6,15 @@ import { sayHello } from '../../helpers/utils';
   styleUrl: 'app-profile.css'
 })
 export class AppProfile {
-
   @State() state = false;
   @Prop() name: string;
+
+  normalize(): string {
+    if (this.name) {
+      return this.name.substr(0, 1).toUpperCase() + this.name.substr(1).toLowerCase();
+    }
+    return '';
+  }
 
   render() {
     return [
@@ -23,15 +29,17 @@ export class AppProfile {
 
       <ion-content padding>
         <p>
-          {sayHello()}! My name is {this.name}. My name was passed in through a route
-          param!
+          {sayHello()}! My name is {this.name}. My name was passed in through a
+          route param!
         </p>
 
         <ion-item>
           <ion-label>Setting ({this.state.toString()})</ion-label>
-          <ion-toggle checked={this.state} onIonChange={(ev) => this.state = ev.detail.checked} />
+          <ion-toggle
+            checked={this.state}
+            onIonChange={ev => (this.state = ev.detail.checked)}
+          />
         </ion-item>
-
       </ion-content>
     ];
   }
