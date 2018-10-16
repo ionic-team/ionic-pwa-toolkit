@@ -2,12 +2,21 @@
   "name": "Ionic PWA Toolkit",
   "short_name": "Ionic PWA",
   "start_url": "/",
+  "dir": "ltr",
+  "lang": "en",
+  "scope": "/",
   "display": "standalone",
-  "icons": [{
-    "src": "assets/icon/icon.png",
-    "sizes": "512x512",
-    "type": "image/png"
-  }],
+  "description": "Ionic PWA Toolkit",
+  "orientation": "any",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "assets/icon/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
   "background_color": "#488aff",
   "theme_color": "#488aff"
 }
