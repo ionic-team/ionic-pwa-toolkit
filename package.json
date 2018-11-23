@@ -1,9 +1,8 @@
 {
-  "name": "@ionic/pwa-toolkit",
+  "name": "{{PROJECT_NAME}}",
   "private": true,
   "version": "0.0.1",
-  "author": "Ionic Team",
-  "description": "Ionic PWA Toolkit",
+  "description": "{{PROJECT_NAME}}",
   "license": "MIT",
   "files": [
     "dist/"

@@ -6,6 +6,7 @@ import { sayHello } from '../../helpers/utils';
   styleUrl: 'app-profile.css'
 })
 export class AppProfile {
+
   @State() state = false;
   @Prop() name: string;
 
