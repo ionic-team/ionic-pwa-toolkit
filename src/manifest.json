@@ -1,6 +1,6 @@
 {
-  "name": "Ionic PWA Toolkit",
-  "short_name": "Ionic PWA",
+  "name": "___PROJECT_NAME___",
+  "short_name": "___PROJECT_NAME___",
   "start_url": "/",
   "display": "standalone",
   "icons": [{
