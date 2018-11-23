@@ -1,8 +1,8 @@
 {
-  "name": "{{PROJECT_NAME}}",
+  "name": "___PROJECT_NAME___",
   "private": true,
   "version": "0.0.1",
-  "description": "{{PROJECT_NAME}}",
+  "description": "___PROJECT_NAME___",
   "license": "MIT",
   "files": [
     "dist/"
