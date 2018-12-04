@@ -1,4 +1,4 @@
-importScripts('workbox-v3.4.1/workbox-sw.js')
+importScripts('workbox-v3.5.0/workbox-sw.js')
 
 /*
   This is our code to handle push events.
