@@ -5,6 +5,7 @@ import { Component } from '@stencil/core';
   styleUrl: 'app-root.css'
 })
 export class AppRoot {
+
   render() {
     return (
       <ion-app>

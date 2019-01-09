@@ -1,9 +1,8 @@
 {
-  "name": "@ionic/pwa-toolkit",
+  "name": "___PROJECT_NAME___",
   "private": true,
   "version": "0.0.1",
-  "author": "Ionic Team",
-  "description": "Ionic PWA Toolkit",
+  "description": "___PROJECT_NAME___",
   "license": "MIT",
   "files": [
     "dist/"
@@ -15,7 +14,9 @@
     "test.watch": "stencil test --spec --e2e --watch"
   },
   "dependencies": {
-    "@ionic/core": "4.0.0-beta.15",
-    "@stencil/core": "0.15.2"
+    "@ionic/core": "4.0.0-rc.0"
+  },
+  "devDependencies": {
+    "@stencil/core": "0.16.1"
   }
 }
