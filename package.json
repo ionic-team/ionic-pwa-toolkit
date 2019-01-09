@@ -1,8 +1,8 @@
 {
-  "name": "___PROJECT_NAME___",
+  "name": "stencil-starter-project-name",
   "private": true,
   "version": "0.0.1",
-  "description": "___PROJECT_NAME___",
+  "description": "stencil-starter-project-name",
   "license": "MIT",
   "files": [
     "dist/"

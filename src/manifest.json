@@ -1,6 +1,6 @@
 {
-  "name": "___PROJECT_NAME___",
-  "short_name": "___PROJECT_NAME___",
+  "name": "stencil-starter-project-name",
+  "short_name": "stencil-starter-project-name",
   "start_url": "/",
   "display": "standalone",
   "icons": [{
