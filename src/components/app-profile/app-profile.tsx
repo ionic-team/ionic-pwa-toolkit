@@ -28,7 +28,7 @@ export class AppProfile {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content padding>
+      <ion-content class="ion-padding">
         <p>
           {sayHello()}! My name is {this.formattedName()}. My name was passed in through a
           route param!
