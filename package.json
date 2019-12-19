@@ -15,9 +15,9 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@ionic/core": "^4.9.1"
+    "@ionic/core": "^4.11.7"
   },
   "devDependencies": {
-    "@stencil/core": "^1.5.2"
+    "@stencil/core": "^1.8.2"
   }
 }
