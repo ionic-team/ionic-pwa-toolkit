@@ -3,10 +3,9 @@ import { sayHello } from '../../helpers/utils';
 
 @Component({
   tag: 'app-profile',
-  styleUrl: 'app-profile.css'
+  styleUrl: 'app-profile.css',
 })
 export class AppProfile {
-
   @State() state = false;
   @Prop() name: string;
 
@@ -30,18 +29,14 @@ export class AppProfile {
 
       <ion-content class="ion-padding">
         <p>
-          {sayHello()}! My name is {this.formattedName()}. My name was passed in through a
-          route param!
+          {sayHello()}! My name is {this.formattedName()}. My name was passed in through a route param!
         </p>
 
         <ion-item>
           <ion-label>Setting ({this.state.toString()})</ion-label>
-          <ion-toggle
-            checked={this.state}
-            onIonChange={ev => (this.state = ev.detail.checked)}
-          />
+          <ion-toggle checked={this.state} onIonChange={ev => (this.state = ev.detail.checked)} />
         </ion-item>
-      </ion-content>
+      </ion-content>,
     ];
   }
 }
