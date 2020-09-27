@@ -1,4 +1,4 @@
-import { AppHome } from './app-home';
+import { AppHome } from '../app-home';
 import { newSpecPage } from '@stencil/core/testing';
 
 describe('app-home', () => {
