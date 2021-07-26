@@ -17,6 +17,8 @@
   "devDependencies": {
     "@ionic/core": "^5.3.2",
     "@stencil/core": "^2.0.1",
+    "@types/jest": "^26.0.24",
+    "@types/puppeteer": "^5.4.4",
     "jest": "^27.0.6"
   }
 }
