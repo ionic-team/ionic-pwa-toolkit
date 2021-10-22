@@ -1,4 +1,4 @@
-import { Component, Prop, State, h } from '@stencil/core';
+import { Component, Prop, State, h, Fragment } from '@stencil/core';
 import { sayHello } from '../../helpers/utils';
 
 @Component({
@@ -9,7 +9,7 @@ export class AppProfile {
   @State() state = false;
   @Prop() name: string;
 
-  formattedName(): string {
+  private formattedName(): string {
     if (this.name) {
       return this.name.substr(0, 1).toUpperCase() + this.name.substr(1).toLowerCase();
     }
@@ -17,26 +17,28 @@ export class AppProfile {
   }
 
   render() {
-    return [
-      <ion-header>
-        <ion-toolbar color="primary">
-          <ion-buttons slot="start">
-            <ion-back-button defaultHref="/" />
-          </ion-buttons>
-          <ion-title>Profile: {this.name}</ion-title>
-        </ion-toolbar>
-      </ion-header>,
+    return (
+      <Fragment>
+        <ion-header>
+          <ion-toolbar color="primary">
+            <ion-buttons slot="start">
+              <ion-back-button defaultHref="/" />
+            </ion-buttons>
+            <ion-title>Profile: {this.name}</ion-title>
+          </ion-toolbar>
+        </ion-header>
 
-      <ion-content class="ion-padding">
-        <p>
-          {sayHello()}! My name is {this.formattedName()}. My name was passed in through a route param!
-        </p>
+        <ion-content class="ion-padding">
+          <p>
+            {sayHello()}! My name is {this.formattedName()}. My name was passed in through a route param!
+          </p>
 
-        <ion-item>
-          <ion-label>Setting ({this.state.toString()})</ion-label>
-          <ion-toggle checked={this.state} onIonChange={ev => (this.state = ev.detail.checked)} />
-        </ion-item>
-      </ion-content>,
-    ];
+          <ion-item>
+            <ion-label>Setting ({this.state.toString()})</ion-label>
+            <ion-toggle checked={this.state} onIonChange={ev => (this.state = ev.detail.checked)} />
+          </ion-item>
+        </ion-content>
+      </Fragment>
+    );
   }
 }
